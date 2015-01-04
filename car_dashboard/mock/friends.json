@@ -1,19 +1,19 @@
 [
 	{
 		"name": "Trevor C",
-		"score": "15",
+		"score": "85",
 		"img": "images/guy1.jpg",
 		"place": "1st"
 	},
 	{
 		"name": "Basil U",
-		"score": "75",
+		"score": "45",
 		"img": "images/guy2.jpg",
 		"place": "3rd"
 	},
 	{
 		"name": "Michael D",
-		"score": "45",
+		"score": "20",
 		"img": "images/guy3.jpg",
 		"place": "4th"
 	}

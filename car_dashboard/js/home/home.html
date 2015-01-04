@@ -48,13 +48,20 @@
 				</div>
 			</div>
 			<div class="trip-stats-container">
-				<div class="row trip-stats-row" ng-repeat="metric in home.user.currentTrip.metrics">
+				<div class="row trip-stats-row">
 					<div class="col-xs-12">
-						<div class="align-left">{{metric.label}}</div>
+						<div class="align-left">Speed</div>
 						<div class="progress">
-							<div class="progress-bar {{home.progressColor(metric.value)}}" style="width: {{metric.value}}%;"></div>
+							<div class="progress-bar {{home.progressColor(home.user.currentTrip.metrics.speed)}}" style="width: {{home.user.currentTrip.metrics.speed}}%;"></div>
 						</div>
-
+					</div>
+				</div>
+				<div class="row trip-stats-row">
+					<div class="col-xs-12">
+						<div class="align-left">Braking</div>
+						<div class="progress">
+							<div class="progress-bar {{home.progressColor(home.user.currentTrip.metrics.braking)}}" style="width: {{home.user.currentTrip.metrics.braking}}%;"></div>
+						</div>
 					</div>
 				</div>
 			</div>

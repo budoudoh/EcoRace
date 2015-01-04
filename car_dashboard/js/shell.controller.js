@@ -13,6 +13,7 @@
         shell.showMenu = showMenu;
         shell.goToTrips = goToTrips;
         shell.goToHome = goToHome;
+        shell.start = start;
         shell.carState = 'parked';
 
         shell.tripDataCacheM2X = [];
@@ -22,6 +23,8 @@
 
         function activate() {
             console.log('shell Controller Loaded');
+
+            $location.path( '/park' );
             initDec()
             subscribeToCar();
         }
@@ -64,10 +67,12 @@
             console.log('Car Error');
         }
 
-        (function tick() {
-            getCar();
-            $timeout(tick, 1000);
-        })();
+        function start() {
+            (function tick() {
+                getCar();
+                $timeout(tick, 1000);
+            })();
+        }
 
         function getCar(){
             console.log('Getting car state');
@@ -179,7 +184,6 @@
         function postM2x() {
             
             for (var k in shell.tripDataCacheM2X) {
-
                 dataservice.m2x.post(shell.tripDataCacheM2X[k]).then(function () {
                     console.log('Just posted to M2X');
                 });
@@ -194,10 +198,33 @@
 
         }
 
+        function currentSpeed(){
+            var currentSpeedLevel = shell.tripDataCache[shell.tripDataCache.length - 1].value.vehicleSpeed.speed;
+
+
+            shell.currentMetrics.speed = currentSpeedLevel;
+
+        }
+
+        function currentAC(){
+            var currentACLevel = 0;
+            var climateControls = shell.tripDataCache[shell.tripDataCache.length - 1].value.climateControl;
+            
+            console.log(climateControls.zones);
+            if (_.contains(climateControls.zones, { 'airConditioning': true })) {
+                currentACLevel += 50;
+            }
+
+
+            shell.currentMetrics.ac = currentACLevel;
+
+        }
+
         function calcMetrics() {
             shell.currentMetrics = {};
             currentFuelUsage();
-
+            currentSpeed();
+            currentAC();
 
 
             $scope.$broadcast('metricChange', shell.currentMetrics);
