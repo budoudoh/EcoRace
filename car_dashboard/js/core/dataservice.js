@@ -11,7 +11,7 @@
     function dataservice($http, $location, $q, userUrl, friendsUrl, carInitUrl, m2xUrl, carChangeUrl) {
         var user = {};
 
-        var testServiceFlip = false;
+        var testServiceFlip = true;
 
         var service = {
             user: {

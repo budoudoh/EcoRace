@@ -27,7 +27,7 @@
 
         function subscribeToCar() {
             console.log(drive.vehicleinfo);
-            drive.vehicleinfo.subscribe(getCarSubscibe, logError);
+            //drive.vehicleinfo.subscribe(getCarSubscibe, logError);
         }
 
         function showMenu(show) {
@@ -149,7 +149,7 @@
             var testCounterForTestData = shell.tripDataCache.length < newData.length ? shell.tripDataCache.length - 1 : newData.length - 1;
 
             if ( shell.tripDataCache.length === 0) {
-                newDataPoint = newData;
+                newDataPoint = newData[0];
             } else {
                 //We need to figure out what changed and update the object
                 for (var k in newData[testCounterForTestData].value) {
