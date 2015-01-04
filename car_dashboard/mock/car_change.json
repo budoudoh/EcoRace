@@ -1,0 +1,83 @@
+[
+	{
+		"component": "vehicleinfo",
+		"eventType": "add",
+		"value": {
+			"ignition": {
+				"vehiclePowerMode": "running"
+			}
+		},
+		"method": "set",
+		"nameSpace": "",
+		"options": null,
+		"handle": 1105657016
+	},
+	{
+		"component": "vehicleinfo",
+		"eventType": "add",
+		"value": {
+			"transmission": {
+				"transmissionMode": "Drive"
+			},
+			"vehicleSpeed": {
+				"speed": 55
+			}
+		},
+		"method": "set",
+		"nameSpace": "",
+		"options": null,
+		"handle": 1111013288
+	},
+	{
+		"component": "vehicleinfo",
+		"eventType": "add",
+		"value": {
+			"transmission": {
+				"transmissionMode": "Drive"
+			},
+			"vehicleSpeed": {
+				"speed": 50
+			}
+		},
+		"method": "set",
+		"nameSpace": "",
+		"options": null,
+		"handle": 1109523832
+	},
+	{
+		"component": "vehicleinfo",
+		"eventType": "add",
+		"value": {
+			"climateControl": {
+				"zones": [
+					{
+						"fanSpeedLevel": 6,
+						"zone": "front"
+					}
+				]
+			}
+		},
+		"method": "set",
+		"nameSpace": "",
+		"options": null,
+		"handle": 1109272736
+	},
+	{
+		"component": "vehicleinfo",
+		"eventType": "add",
+		"value": {
+			"climateControl": {
+				"zones": [
+					{
+						"airRecirculation": true,
+						"zone": "front"
+					}
+				]
+			}
+		},
+		"method": "set",
+		"nameSpace": "",
+		"options": null,
+		"handle": 1112970120
+	}
+]
