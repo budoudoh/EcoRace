@@ -322,7 +322,7 @@
 		},
 		"fuel": {
 			"level": "84"
-		},
+		}
 	},
 	"method": "set",
 	"nameSpace": "",
@@ -338,7 +338,7 @@
 		},
 		"fuel": {
 			"level": "84"
-		},
+		}
 	},
 	"method": "set",
 	"nameSpace": "",
