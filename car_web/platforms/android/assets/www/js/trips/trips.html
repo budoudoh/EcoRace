@@ -1,0 +1,53 @@
+
+<div class="container-spacer trip-container">
+	<ul class="trip-list list-unstyled" ng-show="trips.selectedTrip == null">
+		<li ng-repeat="trip in trips.user.trips" class="row" ng-click="trips.selectTrip(trip)">
+			<div class="col-xs-3">
+				<div class="score circle-text">{{trip.score}}%</div>
+			</div>
+			<div class="col-xs-9">
+				<div class="start">{{trip.start}}</div>
+				<div class="route">{{trip.startLocation}} to {{trip.endLocation}}</div>
+			</div>
+		</li>
+	</ul>
+	<div ng-if="trips.selectedTrip != null">
+		<div class="container hero-container">
+			<div class="row hero-row">
+				<div class="col-xs-12">
+					<img class="hero img-responsive img-circle img-thumbnail center-block" src="http://placehold.it/305x175">
+				</div>
+			</div>
+		</div>
+		<div class="container trip-stats-container">
+			<div class="row">
+				<div class="col-xs-4">
+					<img class="img-circle img-responsive stat-icon" src="images/efficiency.png" />
+					{{trips.selectedTrip.score}}% efficient
+				</div>
+				<div class="col-xs-4">
+					<img class="img-circle img-responsive stat-icon" src="images/time.png" />
+					{{trips.selectedTrip.duration}} minutes
+				</div>
+				<div class="col-xs-4">
+					<img class="img-circle img-responsive stat-icon" src="images/fuel.png" />
+					{{trips.selectedTrip.fuelUsed}} gallons
+				</div>
+			</div>
+		</div>
+		<div class="container trip-stats-container">
+			<div class="row" ng-repeat="metric in trips.selectedTrip.metrics">
+				<div class="col-xs-12">
+					<div class="align-left">{{metric.label}}</div>
+					<div class="progress">
+						<div class="progress-bar {{trips.progressColor(metric.value)}}" style="width: {{metric.value}}%;"></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</div>

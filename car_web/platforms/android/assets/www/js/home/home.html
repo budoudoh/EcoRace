@@ -1,0 +1,36 @@
+<div class="container hero-container">
+	<div class="row hero-row">
+		<div class="col-xs-12">
+			<img class="hero img-responsive img-circle img-thumbnail center-block" src="{{home.user.img}}">
+			<div class="user-content">
+				<h3 class="center-helper">
+					{{home.user.place}} place
+				</h3>
+				<h4 class="center-helper">
+					{{home.user.score}}% average efficiency
+				</h4>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="standings-container">
+	<ul class="user-list list-unstyled">
+		<li ng-repeat="friend in home.friends" class="row">
+			<img class="img-responsive img-circle img-thumbnail col-xs-3" src="{{friend.img}}">
+			<div class="col-xs-offset-1 col-xs-8">
+				<div class="name">{{friend.place}} place</div>
+				<div class="content">
+					{{friend.score}}% efficiency
+				</div>
+			</div>
+		</li>
+		<li class="row">
+			<div class="col-xs-3 center-helper">
+				<i class="fa fa-plus add-icon"></i>
+			</div>
+			<div class="col-xs-offset-1 col-xs-8">
+				Add more players
+			</div>
+		</li>
+	</ul>
+</div>
