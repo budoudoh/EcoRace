@@ -27,7 +27,7 @@
 
         function subscribeToCar() {
             console.log(drive.vehicleinfo);
-            //drive.vehicleinfo.subscribe(getCarSubscibe, logError);
+            drive.vehicleinfo.subscribe(getCarSubscibe, logError);
         }
 
         function showMenu(show) {
