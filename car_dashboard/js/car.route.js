@@ -15,17 +15,17 @@
                 .when(
                     '/park',
                     {
-                        controller: 'home',
-                        controllerAs: 'home',
-                        templateUrl: 'js/home/home.html'
+                        controller: 'park',
+                        controllerAs: 'park',
+                        templateUrl: 'js/park/park.html'
                     }
                 )
                 .when(
                     '/drive',
                     {
-                        controller: 'home',
-                        controllerAs: 'home',
-                        templateUrl: 'js/home/home.html'
+                        controller: 'drive',
+                        controllerAs: 'drive',
+                        templateUrl: 'js/drive/drive.html'
                     }
                 );
         }]);

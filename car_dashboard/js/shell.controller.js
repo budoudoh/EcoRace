@@ -37,11 +37,14 @@
 
         $scope.$on('$locationChangeStart', function() {
             switch ($location.path()){
-                case '/':
-                    shell.title = '';
+                case '/park':
+                    shell.title = 'My Summary';
                     break;
-                case '/trips':
-                    shell.title = 'my trips';
+                case '/drive':
+                    shell.title = 'Current Trip';
+                    break;
+                case '/':
+                    shell.title = 'Trip Summary';
                     break;
             }   
         });
