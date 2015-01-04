@@ -244,7 +244,6 @@
             currentSpeed();
             currentAC();
 			currentTirePressure();
-
             $scope.$broadcast('metricChange', shell.currentMetrics);
 
         }
