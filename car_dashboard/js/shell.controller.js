@@ -15,6 +15,8 @@
         shell.goToHome = goToHome;
         shell.carState = 'parked';
 
+        shell.tripDataCache = [];
+
         activate();
 
         function activate() {
@@ -53,8 +55,7 @@
         (function tick() {
             getCar();
             $timeout(tick, 1000);
-        
-    })();
+        })();
 
         function getCar(){
             console.log('Getting car state');
@@ -67,6 +68,7 @@
                             shell.carState = 'drive';
                             console.log('Now entering drive mode');
                             $location.path( '/drive' );
+                            addDataPoint();
                         } else {
                             console.log('We are still in the initial park mode');
                             $location.path( '/park' );
@@ -79,11 +81,31 @@
                             shell.carState = 'endTrip';
                             console.log('Now ending park mode');
                             $location.path( '/' );
+                            postM2x();
+                        } else {
+                            console.log('We are still in drive mode');
+                            addDataPoint();
                         }
-                        console.log('We are still in drive mode');
+                        
                     break;
                 }
             });
         }
+
+        function addDataPoint () {
+            var dataPoint = {
+                timestamp: Date.now()
+            }
+
+            shell.tripDataCache.push(dataPoint);
+        }
+
+        function postM2x() {
+            dataservice.m2x.post(shell.tripDataCache).then(function () {
+                console.log('Just posted to M2X');
+            });
+        }
+
+
     }
 })();

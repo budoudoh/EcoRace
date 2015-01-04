@@ -25,8 +25,13 @@ body {
 
 .section-title {
 	color: white;
-	font-size: 20px;
+	font-size: 26px;
 	padding-top: 9px;
+	margin-left:-41px;
+}
+
+.app-title {
+	padding-top: 8px;
 }
 
 
@@ -51,19 +56,19 @@ body {
 }
 
 .user-content h3 {
-	font-size: 32px;
 	padding-top: 32px;
+	font-size: 51px;
 }
 
 .left-pane {
-	box-shadow: inset -13px -2px 7px -7px black;
+	box-shadow: inset -10px -3px 5px -8px black;
 }
 
 .standings-container {
 
 }
 
-.user-list{
+.user-list {
 	color:white;
 }
 
@@ -73,7 +78,11 @@ body {
 }
 
 .user-list .name{
-	font-size: 26px;
+	font-size: 38px;
+}
+
+.user-list .content {
+	font-size: 18px;
 }
 
 .add-icon {
@@ -112,6 +121,10 @@ body {
 	margin-top:-10px;
 }
 
+.big-stat {
+	font-size: 19px;
+}
+
 
 .trip-stats-container .progress {
 	border-radius: 8px;
@@ -138,5 +151,10 @@ body {
 	background-color:#f7931e !important;
 }
 
+
+.progress-bar {
+	animation-duration: 5s;
+	-webkit-animation-duration: 5s;
+}
 
 

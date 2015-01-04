@@ -19,15 +19,15 @@
 			<div class="row trip-stats-summary">
 				<div class="col-xs-4 center-helper">
 					<img class="img-circle img-responsive stat-icon center-block" src="images/efficiency.png" />
-					{{drive.user.currentTrip.score}}% efficient
+					<span class="big-stat">{{drive.user.currentTrip.score}}% efficient</span>
 				</div>
 				<div class="col-xs-4 center-helper ">
 					<img class="img-circle img-responsive stat-icon center-block" src="images/time.png" />
-					{{drive.user.currentTrip.duration}} minutes
+					<span class="big-stat">{{drive.user.currentTrip.duration}} minutes</span>
 				</div>
 				<div class="col-xs-4 center-helper ">
 					<img class="img-circle img-responsive stat-icon center-block" src="images/fuel.png" />
-					{{drive.user.currentTrip.fuelUsed}} gallons
+					<span class="big-stat">{{drive.user.currentTrip.fuelUsed}} gallons</span>
 				</div>
 			</div>
 			<div class="trip-stats-container">
@@ -37,7 +37,6 @@
 						<div class="progress">
 							<div class="progress-bar {{drive.progressColor(metric.value)}}" style="width: {{metric.value}}%;"></div>
 						</div>
-
 					</div>
 				</div>
 			</div>

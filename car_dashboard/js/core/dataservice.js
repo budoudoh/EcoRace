@@ -8,7 +8,7 @@
         .factory('dataservice', dataservice); 
 
     /* @ngInject */
-    function dataservice($http, $location, $q, userUrl, friendsUrl, carUrl) {
+    function dataservice($http, $location, $q, userUrl, friendsUrl, carUrl, m2xUrl) {
         var user = {};
 
         var service = {
@@ -21,6 +21,9 @@
             },
             car: {
                 get: getCar
+            },
+            m2x: {
+                post: postTripData
             }
         };
 
@@ -82,6 +85,25 @@
                 var results = [];
                 if (data.data){
                     results = user = data.data;
+                }
+
+                return results;
+            }
+        }
+
+        function postTripData(data) {
+            return $http.post(buildUrl(m2xUrl), data, {
+                    'X-M2X-KEY': '594ff310060a6be0185d893e67875292'
+                })
+                .then(postTripDataComplete)
+                .catch(function(message) {
+                    console.log(message);
+                });
+
+            function postTripDataComplete(data) {
+                var results = [];
+                if (data.data){
+                    results = data.data;
                 }
 
                 return results;

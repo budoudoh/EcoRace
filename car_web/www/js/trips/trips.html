@@ -14,7 +14,7 @@
 	<div ng-if="trips.selectedTrip != null">
 		<div class="hero-container">
 			<div class="row hero-row">
-				<div class="col-xs-12">
+				<div class="col-xs-12 no-padding">
 					<img class="img-responsive center-block" src="images/map.png">
 				</div>
 			</div>
@@ -22,15 +22,15 @@
 		<div class="container trip-stats-container">
 			<div class="row">
 				<div class="col-xs-4">
-					<img class="img-circle img-responsive stat-icon" src="images/efficiency.png" />
+					<img class="img-circle img-responsive stat-icon center-block" src="images/efficiency.png" />
 					{{trips.selectedTrip.score}}% efficient
 				</div>
 				<div class="col-xs-4">
-					<img class="img-circle img-responsive stat-icon" src="images/time.png" />
+					<img class="img-circle img-responsive stat-icon center-block" src="images/time.png" />
 					{{trips.selectedTrip.duration}} minutes
 				</div>
 				<div class="col-xs-4">
-					<img class="img-circle img-responsive stat-icon" src="images/fuel.png" />
+					<img class="img-circle img-responsive stat-icon center-block" src="images/fuel.png" />
 					{{trips.selectedTrip.fuelUsed}} gallons
 				</div>
 			</div>
@@ -42,7 +42,6 @@
 					<div class="progress">
 						<div class="progress-bar {{trips.progressColor(metric.value)}}" style="width: {{metric.value}}%;"></div>
 					</div>
-
 				</div>
 			</div>
 		</div>
