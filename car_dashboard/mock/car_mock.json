@@ -119,16 +119,16 @@
 		"tire": {
 			"zones": [
 				{
-					"pressure": "6",
+					"pressure": "10",
 					"zone": "front+right"
 				}, {
-					"pressure": "0",
+					"pressure": "10",
 					"zone": "front+right"
 				}, {
-					"pressure": "0",
+					"pressure": "10",
 					"zone": "rear+left"
 				}, {
-					"pressure": "0",
+					"pressure": "10",
 					"zone": "rear+right"
 				}
 			]
@@ -322,6 +322,33 @@
 		},
 		"fuel": {
 			"level": "84"
+		}
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"tire": {
+			"zones": [
+				{
+					"pressure": "10",
+					"zone": "front+right"
+				}, {
+					"pressure": "10",
+					"zone": "front+right"
+				}, {
+					"pressure": "5",
+					"zone": "rear+left"
+				}, {
+					"pressure": "10",
+					"zone": "rear+right"
+				}
+			]
 		}
 	},
 	"method": "set",

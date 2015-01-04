@@ -219,13 +219,31 @@
             shell.currentMetrics.ac = currentACLevel;
 
         }
-
+		
+		function currentTirePressure(){
+			
+			var currentTirePressure = 0;
+            var tirePressure = shell.tripDataCache[shell.tripDataCache.length - 1].value.tirePressure;
+            
+            console.log(tirePressure.zones);
+            
+            
+           	for (var i = 0; i < tirePressure.zones.length; i++)
+           	{
+           		var temp = tirePressure.zones[i];
+           		currentTirePressure += temp.pressure;
+           	}
+           	
+           	currentTirePressure = currentTirePressure/40;
+			shell.currentMetrics.tirePressure = currentTirePressure;		
+		}
+		
         function calcMetrics() {
             shell.currentMetrics = {};
             currentFuelUsage();
             currentSpeed();
             currentAC();
-
+			currentTirePressure();
 
             $scope.$broadcast('metricChange', shell.currentMetrics);
 
