@@ -1,0 +1,140 @@
+{
+	"component": "vehicleinfo",
+	"eventType": "get",
+	"value": {
+		"diagnostic": {
+			"antilockBrakingSystem": "OK"
+		},
+		"climateControl": {
+			"zones": [
+				{
+					"zone": "front",
+					"airflowDirection": "frontpanel"
+				}, {
+					"fanSpeedLevel": "0",
+					"zone": "front"
+				}, {
+					"zone": "front",
+					"airConditioning": "false"
+				}, {
+					"airRecirculation": "false",
+					"zone": "front"
+				}, {
+					"heater": "false",
+					"zone": "front"
+				}, {
+					"zone": "front",
+					"seatHeater": "0"
+				}, {
+					"seatCooler": "0",
+					"zone": "front"
+				}
+			],
+			"steeringWheelHeater": "0",
+			"temperature": {
+				"interiorTemperature": "0"
+			}
+		},
+		"vehicleSpeed": {
+			"speed": "55"
+		},
+		"lightStatus": {
+			"rightTurn": "false",
+			"parking": "false",
+			"break": "false",
+			"fog": "false",
+			"highBeam": "false",
+			"hazard": "false",
+			"_break": "false",
+			"leftTurn": "false",
+			"head": "false"
+		},
+		"ignition": {
+			"vehiclePowerMode": "off"
+		},
+		"fuel": {
+			"level": "91"
+		},
+		"door": {
+			"zones": [
+				{
+					"lock": "true",
+					"status": "close",
+					"zone": "driver"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "passenger"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "rear+left"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "rear+right"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "trunk"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "fuel"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "hood"
+				}
+			]
+		},
+		"parkingBreak": {
+			"status": "active"
+		},
+		"sideWindow": {
+			"zones": [
+				{
+					"lock": "true",
+					"openness": "0",
+					"zone": "front+left"
+				}, {
+					"lock": "true",
+					"openness": "0",
+					"zone": "front+right"
+				}, {
+					"lock": "true",
+					"openness": "0",
+					"zone": "rear+left"
+				}, {
+					"lock": "true",
+					"openness": "0",
+					"zone": "rear+right"
+				}
+			]
+		},
+		"transmission": {
+			"transmissionMode": "Park"
+		},
+		"tire": {
+			"zones": [
+				{
+					"pressure": "6",
+					"zone": "front+right"
+				}, {
+					"pressure": "0",
+					"zone": "front+right"
+				}, {
+					"pressure": "0",
+					"zone": "rear+left"
+				}, {
+					"pressure": "0",
+					"zone": "rear+right"
+				}
+			]
+		}
+	},
+	"method": "subscribe",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1452692407
+}
