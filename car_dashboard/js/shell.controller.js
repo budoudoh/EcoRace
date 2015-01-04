@@ -209,9 +209,9 @@
         function currentAC(){
             var currentACLevel = 0;
             var climateControls = shell.tripDataCache[shell.tripDataCache.length - 1].value.climateControl;
-            
-            console.log(climateControls.zones);
-            if (_.contains(climateControls.zones, { 'airConditioning': true })) {
+            var acOn = _.find(climateControls.zones, { 'airConditioning': "true" });
+            console.log('AC on' + acOn);
+            if (acOn !== undefined) {
                 currentACLevel += 50;
             }
 
