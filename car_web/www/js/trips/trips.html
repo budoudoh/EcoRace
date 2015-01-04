@@ -12,10 +12,10 @@
 		</li>
 	</ul>
 	<div ng-if="trips.selectedTrip != null">
-		<div class="container hero-container">
+		<div class="hero-container">
 			<div class="row hero-row">
 				<div class="col-xs-12">
-					<img class="hero img-responsive img-circle img-thumbnail center-block" src="http://placehold.it/305x175">
+					<img class="img-responsive center-block" src="images/map.png">
 				</div>
 			</div>
 		</div>
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container trip-stats-container">
+		<div class="container trip-stats-container metrics-container">
 			<div class="row" ng-repeat="metric in trips.selectedTrip.metrics">
 				<div class="col-xs-12">
 					<div class="align-left">{{metric.label}}</div>
