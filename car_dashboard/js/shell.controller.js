@@ -223,7 +223,7 @@
 		function currentTirePressure(){
 			
 			var currentTirePressure = 0;
-            var tirePressure = shell.tripDataCache[shell.tripDataCache.length - 1].value.tirePressure;
+            var tirePressure = shell.tripDataCache[shell.tripDataCache.length - 1].value.tire;
             
             console.log(tirePressure.zones);
             
@@ -231,10 +231,10 @@
            	for (var i = 0; i < tirePressure.zones.length; i++)
            	{
            		var temp = tirePressure.zones[i];
-           		currentTirePressure += temp.pressure;
+           		currentTirePressure += parseInt(temp.pressure);
            	}
            	
-           	currentTirePressure = currentTirePressure/40;
+           	currentTirePressure = (currentTirePressure/40) * 100;
 			shell.currentMetrics.tirePressure = currentTirePressure;		
 		}
 		
