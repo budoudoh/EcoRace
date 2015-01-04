@@ -56,6 +56,7 @@
             drive.user.currentTrip.fuelUsed = data.fuel;
             drive.user.currentTrip.metrics.speed = data.speed;
             drive.user.currentTrip.metrics.ac = data.ac;
+            drive.user.currentTrip.metrics.tirePressure = data.tirePressure;
             console.log(data.speed);
         });
     }

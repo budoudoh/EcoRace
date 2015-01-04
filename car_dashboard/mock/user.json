@@ -20,8 +20,8 @@
 			"metrics": 
 				{
 					"speed": "40",
-					"braking": "10",
-					"ac": "10"
+					"ac": "10",
+					"tirePressure": "100"
 				}
 		}
 }
