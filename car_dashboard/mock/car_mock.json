@@ -283,7 +283,7 @@
 					"zone": "front",
 					"airflowDirection": "frontpanel"
 				}, {
-					"fanSpeedLevel": "0",
+					"fanSpeedLevel": "5",
 					"zone": "front"
 				}, {
 					"zone": "front",

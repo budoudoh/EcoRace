@@ -1,6 +1,6 @@
 {
 	"name": "Test N",
-	"score": "30",
+	"score": "75",
 	"img": "images/girl1.png",
 	"metrics": {
 		"accel": "40",
@@ -17,15 +17,11 @@
 			"fuelUsed": "12",
 			"startLocation": "Palms Casino and Resort",
 			"endLocation": "MGM Grand",
-			"metrics": [
+			"metrics": 
 				{
-					"label": "Acceleration",
-					"value": "40"
-				},
-				{
-					"label": "Braking",
-					"value": "50"
+					"speed": "40",
+					"braking": "10",
+					"ac": "10"
 				}
-			]
 		}
 }

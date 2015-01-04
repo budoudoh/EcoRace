@@ -48,13 +48,15 @@
                 color = 'yellow';
             }
 
-
             return color;
         }
 
         $scope.$on('metricChange', function(event, data) {
             console.log('metric change');
             drive.user.currentTrip.fuelUsed = data.fuel;
+            drive.user.currentTrip.metrics.speed = data.speed;
+            drive.user.currentTrip.metrics.ac = data.ac;
+            console.log(data.speed);
         });
     }
 })();
