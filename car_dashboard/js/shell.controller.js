@@ -238,12 +238,20 @@
 			shell.currentMetrics.tirePressure = currentTirePressure;		
 		}
 		
+		function currentEfficiency(){
+			shell.currentMetrics.efficiency = (shell.currentMetrics.fuel +  
+				shell.currentMetrics.speed + 
+				shell.currentMetrics.ac + 
+				shell.currentMetrics.tirePressure)/4;
+		}
+		
         function calcMetrics() {
             shell.currentMetrics = {};
             currentFuelUsage();
             currentSpeed();
             currentAC();
 			currentTirePressure();
+			currentEfficiency();
             $scope.$broadcast('metricChange', shell.currentMetrics);
 
         }
