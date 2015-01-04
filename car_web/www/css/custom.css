@@ -81,7 +81,8 @@ body {
 
 
 .standings-container {
-
+	max-height: 269px;
+	overflow: auto;
 }
 
 .user-list{
@@ -141,8 +142,13 @@ body {
 	text-align: center;
 }
 
+.metrics-container{
+	overflow: auto;
+	max-height:279px;
+}
+
 .stat-icon{
-	margin-top:-10px;
+	margin-top:-14px;
 }
 
 
