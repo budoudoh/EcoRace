@@ -66,7 +66,7 @@
         }
 
         function buildUrl(uri){
-            var url = '/' + uri;
+            var url = uri;
 
             
 
