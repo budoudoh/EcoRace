@@ -4,7 +4,7 @@
         .controller('shell', shellCtrl);
 
 
-    function shellCtrl($location, $scope) {
+    function shellCtrl($location, $scope, $timeout, dataservice) {
         var shell = this;
 
 
@@ -13,6 +13,7 @@
         shell.showMenu = showMenu;
         shell.goToTrips = goToTrips;
         shell.goToHome = goToHome;
+        shell.carState = 'parked';
 
         activate();
 
@@ -49,8 +50,40 @@
             }   
         });
 
-
-
+        (function tick() {
+            getCar();
+            $timeout(tick, 1000);
         
+    })();
+
+        function getCar(){
+            console.log('Getting car state');
+            dataservice.car.get().then(function (data) {
+                console.log(data);
+                switch (shell.carState) {
+                    case 'parked':
+                        if (data.drive === true) {
+                            //This should mark the transition from park into drive.  We should start polling instantaneous data and doing cool calculations
+                            shell.carState = 'drive';
+                            console.log('Now entering drive mode');
+                            $location.path( '/drive' );
+                        } else {
+                            console.log('We are still in the initial park mode');
+                            $location.path( '/park' );
+                        }
+                        
+                    break;
+                    case 'drive':
+                        if (data.parked === true) {
+                            //This should mark the transition from drive into park.  We should stop polling and calculating and switch to the trip summary screen
+                            shell.carState = 'endTrip';
+                            console.log('Now ending park mode');
+                            $location.path( '/' );
+                        }
+                        console.log('We are still in drive mode');
+                    break;
+                }
+            });
+        }
     }
 })();

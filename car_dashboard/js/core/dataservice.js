@@ -8,7 +8,7 @@
         .factory('dataservice', dataservice); 
 
     /* @ngInject */
-    function dataservice($http, $location, $q, userUrl, friendsUrl) {
+    function dataservice($http, $location, $q, userUrl, friendsUrl, carUrl) {
         var user = {};
 
         var service = {
@@ -18,10 +18,33 @@
             },
             friends: {
                 get: getFriends
+            },
+            car: {
+                get: getCar
             }
         };
 
         return service;
+
+
+        function getCar(){
+            return $http.get(buildUrl(carUrl), {
+                    params: {}
+                })
+                .then(getCarComplete)
+                .catch(function(message) {
+                    console.log(message);
+                });
+
+            function getCarComplete(data) {
+                var results = [];
+                if (data.data){
+                    results = data.data;
+                }
+
+                return results;
+            }
+        }
 
         function getFriends(){
             return $http.get(buildUrl(friendsUrl), {

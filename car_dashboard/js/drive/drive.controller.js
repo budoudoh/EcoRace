@@ -16,7 +16,22 @@
 
         function activate() {
             console.log('trip Controller Loaded');
-            drive.user = dataservice.user.getCache();
+            getUser();
+            getFriends();
+        }
+
+        function getUser() {
+            dataservice.user.get().then(function (data) {
+                console.log(data);
+                drive.user = data;
+            });
+        }
+
+        function getFriends() {
+            dataservice.friends.get().then(function (data) {
+                console.log(data);
+                drive.friends = data;
+            });
         }
 
         function selectTrip(trip) {
