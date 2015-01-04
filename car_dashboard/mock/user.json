@@ -14,7 +14,7 @@
 			"score": 20,
 			"start": "Jan 2 2015, 2:30PM",
 			"duration": "34",
-			"fuelUsed": ".32",
+			"fuelUsed": "12",
 			"startLocation": "Palms Casino and Resort",
 			"endLocation": "MGM Grand",
 			"metrics": [
@@ -25,12 +25,7 @@
 				{
 					"label": "Braking",
 					"value": "50"
-				},
-				{
-					"label": "Speed Limit",
-					"value": "80"
 				}
-				
 			]
 		}
 }
