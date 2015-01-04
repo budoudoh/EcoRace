@@ -7,7 +7,7 @@
     function homeCtrl(dataservice) {
         var home = this;
 
-
+        home.progressColor = progressColor;
 
         activate();
 
@@ -28,6 +28,20 @@
                 console.log(data);
                 home.friends = data;
             });
+        }
+
+        function progressColor(value) {
+            var color = "green";
+            if (value < 20) {
+                color = 'red';
+            } else if (value >= 20 && value < 40){
+                color = 'orange';
+            } else if (value >= 40 && value < 75){
+                color = 'yellow';
+            }
+
+
+            return color;
         }
     }
 })();

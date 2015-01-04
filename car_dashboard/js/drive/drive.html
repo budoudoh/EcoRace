@@ -3,22 +3,22 @@
 		<div class="col-xs-5 left-pane">
 			<div class="row hero-row">
 				<div class="col-xs-7">
-					<img class="hero img-responsive img-circle img-thumbnail center-block" src="{{home.user.img}}">
+					<img class="hero img-responsive img-circle img-thumbnail center-block" src="{{drive.user.img}}">
 				</div>
 				<div class="col-xs-5">
 					<div class="user-content">
 						<h3 class="">
-							{{home.user.place}} place
+							{{drive.user.place}} place
 						</h3>
 						<h4 class="">
-							{{home.user.score}}% average efficiency
+							{{drive.user.score}}% average efficiency
 						</h4>
 					</div>
 				</div>
 			</div>
 			<div class="standings-container">
 				<ul class="user-list list-unstyled">
-					<li ng-repeat="friend in home.friends" class="row">
+					<li ng-repeat="friend in drive.friends" class="row">
 						<img class="img-responsive img-circle img-thumbnail col-xs-3" src="{{friend.img}}">
 						<div class="col-xs-offset-1 col-xs-8">
 							<div class="name">{{friend.place}} place</div>
@@ -36,23 +36,23 @@
 			<div class="row trip-stats-summary">
 				<div class="col-xs-4 center-helper ">
 					<img class="img-circle img-responsive stat-icon center-block" src="images/efficiency.png" />
-					{{home.user.currentTrip.score}}% efficient
+					{{drive.user.currentTrip.score}}% efficient
 				</div>
 				<div class="col-xs-4 center-helper ">
 					<img class="img-circle img-responsive stat-icon center-block" src="images/time.png" />
-					{{home.user.currentTrip.duration}} minutes
+					{{drive.user.currentTrip.duration}} minutes
 				</div>
 				<div class="col-xs-4 center-helper ">
 					<img class="img-circle img-responsive stat-icon center-block" src="images/fuel.png" />
-					{{home.user.currentTrip.fuelUsed}} gallons
+					{{drive.user.currentTrip.fuelUsed}} gallons
 				</div>
 			</div>
 			<div class="trip-stats-container">
-				<div class="row trip-stats-row" ng-repeat="metric in home.user.currentTrip.metrics">
+				<div class="row trip-stats-row" ng-repeat="metric in drive.user.currentTrip.metrics">
 					<div class="col-xs-12">
 						<div class="align-left">{{metric.label}}</div>
 						<div class="progress">
-							<div class="progress-bar {{home.progressColor(metric.value)}}" style="width: {{metric.value}}%;"></div>
+							<div class="progress-bar {{drive.progressColor(metric.value)}}" style="width: {{metric.value}}%;"></div>
 						</div>
 
 					</div>

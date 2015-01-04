@@ -29,27 +29,24 @@
 
 </head>
 <body ng-app="app" ng-controller="shell as shell">
-  <div id="navbar" ng-class="shell.navVisible ? 'navbar-show' : 'navbar-collapse collapse' ">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="" ng-click="shell.goToHome()">Home</a></li>
-            <li><a ng-click="shell.goToTrips()">Trips</a></li>
-          </ul>
-        </div>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-inverse">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed custom-nav">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="section-title">
-            <div class="col-xs-12">
-              {{shell.title}}
+        <div class="row section-title">
+          <div class="col-xs-12">
+            <div class="pull-left">{{shell.title}}</div> 
+            <div class="pull-right">
+              <img src="images/logo.png" /> &nbsp;ECORACE
             </div>
           </div>
+
+        </div>
+        <div class="navbar-header">
           
+          <div class="section-title">
+            <div class="col-xs-12">
+             
+            </div>
+          </div>
         </div>
         <!--/.nav-collapse -->
       </div>
@@ -57,9 +54,6 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
-      <div class="col-xs-12">
-      </div>
     </div>
     <div>
       <div ng-view></div>
@@ -80,6 +74,8 @@
     <script src="js/shell.controller.js"></script>
 
     <script src="js/home/home.controller.js"></script>
+    <script src="js/park/park.controller.js"></script>
+    <script src="js/drive/drive.controller.js"></script>
     <script src="js/car.route.js"></script>
 
 

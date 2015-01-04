@@ -8,7 +8,7 @@
 		"speedLimit": 80
 	},
 	"place": "2nd",
-	"trips": [
+	"currentTrip": 
 		{
 			"id": "1",
 			"score": 20,
@@ -32,30 +32,5 @@
 				}
 				
 			]
-		},
-		{
-			"id": "2",
-			"score": 20,
-			"start": "Jan 2 2015, 2:30PM",
-			"duration": "34",
-			"fuelUsed": ".32",
-			"startLocation": "Palms Casino and Resort",
-			"endLocation": "MGM Grand",
-			"metrics": [
-				{
-					"label": "Acceleration",
-					"value": "40"
-				},
-				{
-					"label": "Braking",
-					"value": "50"
-				},
-				{
-					"label": "Speed Limit",
-					"value": "80"
-				}
-				
-			]
 		}
-	]
 }
