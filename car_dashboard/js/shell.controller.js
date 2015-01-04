@@ -4,7 +4,7 @@
         .controller('shell', shellCtrl);
 
 
-    function shellCtrl($location, $scope, $timeout, dataservice) {
+    function shellCtrl($location, $scope, $timeout, dataservice, $rootScope) {
         var shell = this;
 
 
@@ -22,6 +22,7 @@
 
         function activate() {
             console.log('shell Controller Loaded');
+            initDec()
             subscribeToCar();
         }
 
@@ -202,6 +203,57 @@
             $scope.$broadcast('metricChange', shell.currentMetrics);
 
         }
+        
+        // AT&T DRIVE DEC INIT
+		function initDec() {
+		    $rootScope.decInstance = {};
+		    window.DecInstanceConstructor = function (inputParam) {
+		        var input = inputParam;
+		        var isOnline = input && input.successCode == '0';
+		
+		        function getSuccessObject() {
+		            return isOnline ? input : null;
+		        }
+		
+		        function getErrorObject() {
+		            return !isOnline ? input : null;
+		        }
+		
+		        function status() {
+		            var returnObj = {};
+		
+		            returnObj.status = isOnline ? 'success' : 'error';
+		            returnObj.message = isOnline ? input.successMessage : input.errorMessage;
+		            returnObj.code = isOnline ? input.successCode : input.errorCode;
+		
+		            return returnObj;
+		        }
+		
+		        return {
+		            isOnline: isOnline,
+		            status: status,
+		            getSuccessObject: getSuccessObject,
+		            getErrorObject: getErrorObject
+		        };
+		    };
+		
+		    function decCallback(decResponse) {
+		        $rootScope.decInstance = new DecInstanceConstructor(decResponse);
+		
+		        decSetSubscriptions();
+		    };
+		
+		    try {
+		        // DO NOT REMOVE THE BELLOW COMMENT - used for grunt build process
+		        init(decCallback, ["appmanager", "commerce", "connectivity", "identity", "media", "navigation", "notification", "policy", "sa", "search", "settings", "sms", "va", "vehicleinfo"], 'app');
+		    } catch (e) {
+		        $rootScope.decInstance = new DecInstanceConstructor({
+		            "errorCode": e.code,
+		            "errorMessage": e.message,
+		            "thrownError": e
+		        });
+		    }
+		}
 
 
     }

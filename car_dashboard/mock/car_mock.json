@@ -314,29 +314,61 @@
 	"handle": 1111013288
 },
 {
-		"component": "vehicleinfo",
-		"eventType": "add",
-		"value": {
-			"transmission": {
-				"transmissionMode": "Park"
-			}
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"vehicleSpeed": {
+			"speed": 25
 		},
-		"method": "set",
-		"nameSpace": "",
-		"options": null,
-		"handle": 1111013288
+		"fuel": {
+			"level": "84"
+		},
 	},
-	{
-		"component": "vehicleinfo",
-		"eventType": "add",
-		"value": {
-			"ignition": {
-				"vehiclePowerMode": "off"
-			}
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"vehicleSpeed": {
+			"speed": 0
 		},
-		"method": "set",
-		"nameSpace": "",
-		"options": null,
-		"handle": 1111013288
-	}
+		"fuel": {
+			"level": "84"
+		},
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"transmission": {
+			"transmissionMode": "Park"
+		}
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"ignition": {
+			"vehiclePowerMode": "off"
+		}
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1105657016
+}
 ]
