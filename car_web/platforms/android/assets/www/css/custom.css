@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Museo';
+	  src: url('../font/Museo500-Regular.eot'); /* IE9 Compat Modes */
+	  src: url('../font/Museo500-Regular.woff') format('woff'), 
+	       url('../font/Museo500-Regular.ttf')  format('truetype')
+}
+
+
+
+body {
+	background-color: #3dc1c7;
+	font-family: 'Museo';
+}
+
+.center-helper {
+	text-align:center;
+}
+
+.align-left {
+	text-align:left;
+}
+
+.navbar {
+	background-color: #3dc1c7;
+	border-bottom:none;
+	box-shadow: 0px 0px 13px 0px black;
+}
+
+.navbar-show {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #35a9af;
+	width: 50%;
+	padding-left: 10px;
+	z-index: 99999;
+	height:100%;
+	box-shadow: 6px 0 10px -4px black;
+}
+.navbar-show ul{
+	margin: 7.5px 0px 0 -15px !important;
+}
+
+.navbar-show li{
+	border-bottom:1px solid #3dc1c7;
+}
+
+.navbar-show a{
+	color:white;
+}
+
+.navbar .custom-nav {
+	float:left;
+	border: none;
+	margin: 10px 0;
+}
+
+.section-title {
+	color: white;
+	font-size: 20px;
+	padding-top: 9px;
+	padding-left: 109px;
+}
+
+
+.hero-container{
+	background-color: #35a9af;
+	box-shadow: inset 0px -13px 12px -14px black;
+}
+
+.hero-row {
+	margin-top:10px;
+	color:white;
+}
+
+.hero {
+	position: relative;
+	z-index:1040;
+	width: 80%;
+}
+
+
+.standings-container {
+
+}
+
+.user-list{
+	color:white;
+}
+
+.user-list li{
+	padding:10px 14px;
+	border-bottom:1px solid #35a9af;
+}
+
+.user-list .name{
+	font-size: 18px;
+}
+
+.add-icon {
+	font-size:18px;
+}
+
+.container-spacer{
+	margin-top: 52px;
+}
+
+.trip-container {
+	background: white;
+	color:#35a9af;
+}
+
+.trip-list li{
+	border-bottom:2px solid #35a9af;
+	padding:10px 14px;
+}
+
+.trip-list li .score {
+	background-color:#35a9af;
+}
+
+.trip-list li .start {
+	font-size:16px;
+}
+
+.circle-text {
+	border-radius: 50%;
+	width: 36px;
+	color: white;
+	text-align: center;
+	height: 36px;
+	vertical-align: text-top;
+	padding-top: 8px;
+}
+
+.trip-stats-container {
+	background-color: #3dc1c7;
+	border-bottom:2px solid #35a9af;
+	padding-bottom:10px;
+	color: white;
+	text-align: center;
+}
+
+.stat-icon{
+	margin-top:-10px;
+}
+
+
+.trip-stats-container .progress {
+	border-radius: 8px;
+}
+
+.trip-stats-container .progress-bar{
+	height: 74%;
+	margin: 3px;
+	border-radius: 8px;
+}
+
+.green{
+	background-color:#8cc63f !important;
+}
+
+.yellow{
+	background-color:#d7df23 !important;
+}
+.red{
+	background-color:#ed1c24 !important;
+}
+
+.orange{
+	background-color:#f7931e !important;
+}
+
+
+
