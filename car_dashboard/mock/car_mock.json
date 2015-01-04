@@ -321,7 +321,7 @@
 			"speed": 25
 		},
 		"fuel": {
-			"level": "84"
+			"level": "77"
 		}
 	},
 	"method": "set",
@@ -364,7 +364,7 @@
 			"speed": 0
 		},
 		"fuel": {
-			"level": "84"
+			"level": "76"
 		}
 	},
 	"method": "set",
