@@ -8,8 +8,10 @@
         .factory('dataservice', dataservice); 
 
     /* @ngInject */
-    function dataservice($http, $location, $q, userUrl, friendsUrl, carUrl, m2xUrl) {
+    function dataservice($http, $location, $q, userUrl, friendsUrl, carInitUrl, m2xUrl, carChangeUrl) {
         var user = {};
+
+        var testServiceFlip = false;
 
         var service = {
             user: {
@@ -31,7 +33,12 @@
 
 
         function getCar(){
-            return $http.get(buildUrl(carUrl), {
+            var url = carInitUrl;
+            if (testServiceFlip) {
+                url = carChangeUrl;
+            }
+
+            return $http.get(buildUrl(url), {
                     params: {}
                 })
                 .then(getCarComplete)
@@ -43,6 +50,7 @@
                 var results = [];
                 if (data.data){
                     results = data.data;
+                    testServiceFlip = true;
                 }
 
                 return results;
