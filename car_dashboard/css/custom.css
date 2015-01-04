@@ -115,6 +115,8 @@ body {
 	padding: 26px;
 	color: white;
 	text-align: center;
+	max-height: 200px;
+	overflow: auto;
 }
 
 .stat-icon{

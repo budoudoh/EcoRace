@@ -41,17 +41,17 @@
 				</div>
 				<div class="row trip-stats-row">
 					<div class="col-xs-12">
-						<div class="align-left">Braking</div>
+						<div class="align-left">HVAC</div>
 						<div class="progress">
-							<div class="progress-bar {{drive.progressColor(drive.user.currentTrip.metrics.braking)}}" style="width: {{metric.value}}%;"></div>
+							<div class="progress-bar {{drive.progressColor(drive.user.currentTrip.metrics.ac)}}" style="width: {{drive.user.currentTrip.metrics.ac}}%;"></div>
 						</div>
 					</div>
 				</div>
 				<div class="row trip-stats-row">
 					<div class="col-xs-12">
-						<div class="align-left">HVAC</div>
+						<div class="align-left">Tire Pressure</div>
 						<div class="progress">
-							<div class="progress-bar {{drive.progressColor(drive.user.currentTrip.metrics.ac)}}" style="width: {{drive.user.currentTrip.metrics.ac}}%;"></div>
+							<div class="progress-bar {{drive.progressColor(drive.user.currentTrip.metrics.tirePressure)}}" style="width: {{drive.user.currentTrip.metrics.tirePressure}}%;"></div>
 						</div>
 					</div>
 				</div>
