@@ -27,7 +27,7 @@
 
         function subscribeToCar() {
             console.log(drive.vehicleinfo);
-            //drive.vehicleinfo.subscribe(getCar, logError);
+            //drive.vehicleinfo.subscribe(getCarSubscibe, logError);
         }
 
         function showMenu(show) {
@@ -103,6 +103,43 @@
                 }
             });
         }
+
+        function getCarSubscibe(data){
+            console.log('Getting car state');
+            var currentState = {};
+            
+                console.log(data);
+                currentState = updateDataPoint(data);
+                addDataPoint(currentState);
+                switch (shell.carState) {
+                    case 'parked':
+                        if (currentState.value.ignition.vehiclePowerMode === 'running' && currentState.value.transmission.transmissionMode === 'Drive') {
+                            //This should mark the transition from park into drive.  We should start polling instantaneous data and doing cool calculations
+                            shell.carState = 'drive';
+                            console.log('Now entering drive mode');
+                            $location.path( '/drive' );
+                            
+                        } else {
+                            console.log('We are still in the initial park mode');
+                            $location.path( '/park' );
+                        }
+                        
+                    break;
+                    case 'drive':
+                        if (currentState.value.ignition.vehiclePowerMode === 'off' && data.value.transmission.transmissionMode === 'Park') {
+                            //This should mark the transition from drive into park.  We should stop polling and calculating and switch to the trip summary screen
+                            shell.carState = 'endTrip';
+                            console.log('Now ending park mode');
+                            $location.path( '/' );
+                            postM2x();
+                        } else {
+                            console.log('We are still in drive mode');
+                        }
+                    break;
+                }
+           
+        }
+
 
         function updateDataPoint(newData) {
             var lastDataPoint = shell.tripDataCache[shell.tripDataCache.length - 1];
