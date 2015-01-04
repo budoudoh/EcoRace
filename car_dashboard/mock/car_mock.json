@@ -164,7 +164,7 @@
 		},
 		"fuel": {
 			"level": "91"
-		},
+		}
 	},
 	"method": "set",
 	"nameSpace": "",
@@ -180,7 +180,7 @@
 		},
 		"fuel": {
 			"level": "88"
-		},
+		}
 	},
 	"method": "set",
 	"nameSpace": "",
@@ -196,7 +196,7 @@
 		},
 		"fuel": {
 			"level": "87"
-		},
+		}
 	},
 	"method": "set",
 	"nameSpace": "",
@@ -212,7 +212,7 @@
 		},
 		"fuel": {
 			"level": "87"
-		},
+		}
 	},
 	"method": "set",
 	"nameSpace": "",
@@ -228,7 +228,7 @@
 		},
 		"fuel": {
 			"level": "87"
-		},
+		}
 	},
 	"method": "set",
 	"nameSpace": "",
@@ -244,7 +244,7 @@
 		},
 		"fuel": {
 			"level": "85"
-		},
+		}
 	},
 	"method": "set",
 	"nameSpace": "",
