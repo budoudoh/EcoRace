@@ -1,0 +1,316 @@
+[
+{
+	"component": "vehicleinfo",
+	"eventType": "get",
+	"value": {
+		"diagnostic": {
+			"antilockBrakingSystem": "OK"
+		},
+		"climateControl": {
+			"zones": [
+				{
+					"zone": "front",
+					"airflowDirection": "frontpanel"
+				}, {
+					"fanSpeedLevel": "0",
+					"zone": "front"
+				}, {
+					"zone": "front",
+					"airConditioning": "false"
+				}, {
+					"airRecirculation": "false",
+					"zone": "front"
+				}, {
+					"heater": "false",
+					"zone": "front"
+				}, {
+					"zone": "front",
+					"seatHeater": "0"
+				}, {
+					"seatCooler": "0",
+					"zone": "front"
+				}
+			],
+			"steeringWheelHeater": "0",
+			"temperature": {
+				"interiorTemperature": "0"
+			}
+		},
+		"vehicleSpeed": {
+			"speed": "55"
+		},
+		"lightStatus": {
+			"rightTurn": "false",
+			"parking": "false",
+			"break": "false",
+			"fog": "false",
+			"highBeam": "false",
+			"hazard": "false",
+			"_break": "false",
+			"leftTurn": "false",
+			"head": "false"
+		},
+		"ignition": {
+			"vehiclePowerMode": "off"
+		},
+		"fuel": {
+			"level": "91"
+		},
+		"door": {
+			"zones": [
+				{
+					"lock": "true",
+					"status": "close",
+					"zone": "driver"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "passenger"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "rear+left"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "rear+right"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "trunk"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "fuel"
+				}, {
+					"lock": "true",
+					"status": "close",
+					"zone": "hood"
+				}
+			]
+		},
+		"parkingBreak": {
+			"status": "active"
+		},
+		"sideWindow": {
+			"zones": [
+				{
+					"lock": "true",
+					"openness": "0",
+					"zone": "front+left"
+				}, {
+					"lock": "true",
+					"openness": "0",
+					"zone": "front+right"
+				}, {
+					"lock": "true",
+					"openness": "0",
+					"zone": "rear+left"
+				}, {
+					"lock": "true",
+					"openness": "0",
+					"zone": "rear+right"
+				}
+			]
+		},
+		"transmission": {
+			"transmissionMode": "Park"
+		},
+		"tire": {
+			"zones": [
+				{
+					"pressure": "6",
+					"zone": "front+right"
+				}, {
+					"pressure": "0",
+					"zone": "front+right"
+				}, {
+					"pressure": "0",
+					"zone": "rear+left"
+				}, {
+					"pressure": "0",
+					"zone": "rear+right"
+				}
+			]
+		}
+	},
+	"method": "subscribe",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1452692407
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"ignition": {
+			"vehiclePowerMode": "running"
+		}
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1105657016
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"transmission": {
+			"transmissionMode": "Drive"
+		},
+		"vehicleSpeed": {
+			"speed": 55
+		},
+		"fuel": {
+			"level": "91"
+		},
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"vehicleSpeed": {
+			"speed": 75
+		},
+		"fuel": {
+			"level": "88"
+		},
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"vehicleSpeed": {
+			"speed": 55
+		},
+		"fuel": {
+			"level": "87"
+		},
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"vehicleSpeed": {
+			"speed": 14
+		},
+		"fuel": {
+			"level": "87"
+		},
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"vehicleSpeed": {
+			"speed": 0
+		},
+		"fuel": {
+			"level": "87"
+		},
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"vehicleSpeed": {
+			"speed": 30
+		},
+		"fuel": {
+			"level": "85"
+		},
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"vehicleSpeed": {
+			"speed": 55
+		},
+		"fuel": {
+			"level": "84"
+		},
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+},
+{
+	"component": "vehicleinfo",
+	"eventType": "add",
+	"value": {
+		"vehicleSpeed": {
+			"speed": 55
+		},
+		"fuel": {
+			"level": "78"
+		},
+		"climateControl": {
+				"zones": [
+				{
+					"zone": "front",
+					"airflowDirection": "frontpanel"
+				}, {
+					"fanSpeedLevel": "0",
+					"zone": "front"
+				}, {
+					"zone": "front",
+					"airConditioning": "true"
+				}, {
+					"airRecirculation": "true",
+					"zone": "front"
+				}, {
+					"heater": "false",
+					"zone": "front"
+				}, {
+					"zone": "front",
+					"seatHeater": "0"
+				}, {
+					"seatCooler": "0",
+					"zone": "front"
+				}
+			],
+			"steeringWheelHeater": "0",
+			"temperature": {
+				"interiorTemperature": "0"
+			}
+		}
+	},
+	"method": "set",
+	"nameSpace": "",
+	"options": null,
+	"handle": 1111013288
+}
+]
