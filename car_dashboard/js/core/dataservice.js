@@ -100,8 +100,10 @@
         }
 
         function postTripData(data) {
-            return $http.post(buildUrl(m2xUrl), data, {
-                    'X-M2X-KEY': '594ff310060a6be0185d893e67875292'
+            return $http.put(buildUrl(m2xUrl), data, {
+                    headers: {
+                        'X-M2X-KEY': '594ff310060a6be0185d893e67875292'
+                    }
                 })
                 .then(postTripDataComplete)
                 .catch(function(message) {

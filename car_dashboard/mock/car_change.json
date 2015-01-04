@@ -79,5 +79,31 @@
 		"nameSpace": "",
 		"options": null,
 		"handle": 1112970120
+	},
+	{
+		"component": "vehicleinfo",
+		"eventType": "add",
+		"value": {
+			"transmission": {
+				"transmissionMode": "Park"
+			}
+		},
+		"method": "set",
+		"nameSpace": "",
+		"options": null,
+		"handle": 1111013288
+	},
+	{
+		"component": "vehicleinfo",
+		"eventType": "add",
+		"value": {
+			"ignition": {
+				"vehiclePowerMode": "off"
+			}
+		},
+		"method": "set",
+		"nameSpace": "",
+		"options": null,
+		"handle": 1111013288
 	}
 ]

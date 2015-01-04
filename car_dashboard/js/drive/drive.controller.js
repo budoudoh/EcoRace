@@ -4,7 +4,7 @@
         .controller('drive', driveCtrl);
 
 
-    function driveCtrl(dataservice) {
+    function driveCtrl(dataservice, $scope) {
         var drive = this;
 
         drive.selectTrip = selectTrip;
@@ -51,5 +51,10 @@
 
             return color;
         }
+
+        $scope.$on('metricChange', function(event, data) {
+            console.log('metric change');
+            drive.user.currentTrip.fuelUsed = data.fuel;
+        });
     }
 })();
